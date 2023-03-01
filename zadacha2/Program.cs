@@ -43,5 +43,4 @@ if (size <= 1)
 int[] array = CreateArray(size);
 Console.Write("Массив заполнен числами: ");
 ShowArray(array);
-SumOddPosition(array);
-Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях: {sum}");
+Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях: {SumOddPosition(array)}");
