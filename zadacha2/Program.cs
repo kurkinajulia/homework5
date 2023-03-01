@@ -21,14 +21,21 @@ void ShowArray(int[] array) //показ массива
     }
 }
 
-int sum = 0;
-int i = 0;
 int SumOddPosition(int[] array) //суммирование элементов, стоящих на нечётных позициях
 {
-    while (i < array.Length)
+    int sum = 0;
+    int index = 1;
+    if (array.Length == 1)
     {
-        sum = sum + array[i + 1];
-        i += +2;
+        return array[0];
+    }
+    else
+    {
+        while (index < array.Length)
+        {
+            sum = sum + array[index];
+            index = index + 2;
+        }
     }
     return sum;
 }
@@ -42,5 +49,4 @@ if (size <= 1)
 int[] array = CreateArray(size);
 Console.Write("Массив заполнен числами: ");
 ShowArray(array);
-SumOddPosition(array);
-Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях: {sum}");
+Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях: {SumOddPosition(array)}");
