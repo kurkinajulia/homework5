@@ -24,7 +24,7 @@ void ShowArray(int[] array) //показ массива
 int SumOddPosition(int[] array) //суммирование элементов, стоящих на нечётных позициях
 {
     int sum = 0;
-    int i = 1;
+    int i = 0;
     {
     while (i < array.Length)
     {
