@@ -3,14 +3,6 @@
 //[345, 897, 568, 234] -> 2
 
 
-int Prompt(string messageTerminal)
-{
-    Console.Write(messageTerminal);
-    string input = Console.ReadLine();
-    int result = int.Parse(input);
-    return result;
-}
-
 int[] CreateArray(int size) //cоздание массива
 {
     int[] array = new int[size];
@@ -40,15 +32,15 @@ int ShowEvenNumbers(int[] array) //подсчёт количества чётн�
     return even;
 }
 
-int size = Prompt("Введите размер массива: "); //введение пользователем размера массива 
+Console.Write("Введите размер массива: "); //введение пользователем размера массива 
+int size = Convert.ToInt32(Console.ReadLine());
 if (size <= 1)
 {
     Console.WriteLine("Размер массива должен быть больше 1.");
     return;
 }
 
-Console.Write("Массив заполнен числами: ");
 int[] array = CreateArray(size);
+Console.Write("Массив заполнен числами: ");
 ShowArray(array);
-ShowEvenNumbers(array);
-Console.WriteLine($"Количество чётных чисел в массиве: {even}");
+Console.WriteLine($"Количество чётных чисел в массиве: {ShowEvenNumbers(array)}");
