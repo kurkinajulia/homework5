@@ -2,14 +2,6 @@
 //Найдите сумму элементов, стоящих на нечётных позициях.
 
 
-int Prompt(string messageTerminal)
-{
-    Console.Write(messageTerminal);
-    string input = Console.ReadLine();
-    int result = int.Parse(input);
-    return result;
-}
-
 int[] CreateArray(int size) //cоздание массива
 {
     int[] array = new int[size];
@@ -40,15 +32,16 @@ int SumOddPosition(int[] array) //суммирование элементов, �
     return sum;
 }
 
-int size = Prompt("Введите размер массива: "); //введение пользователем размера массива 
+Console.Write("Введите размер массива: "); //введение пользователем размера массива 
+int size = Convert.ToInt32(Console.ReadLine());
 if (size <= 1)
 {
     Console.WriteLine("Размер массива должен быть больше 1.");
     return;
 }
 
-Console.Write("Массив заполнен числами: ");
 int[] array = CreateArray(size);
+Console.Write("Массив заполнен числами: ");
 ShowArray(array);
 SumOddPosition(array);
 Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях: {sum}");
