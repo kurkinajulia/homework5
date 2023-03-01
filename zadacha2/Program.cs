@@ -24,17 +24,17 @@ void ShowArray(int[] array) //показ массива
 int SumOddPosition(int[] array) //суммирование элементов, стоящих на нечётных позициях
 {
     int sum = 0;
-    int index = 1;
+    int i = 1;
     if (array.Length == 1)
     {
         return array[0];
     }
     else
     {
-        while (index < array.Length)
+        while (i < array.Length)
         {
-            sum = sum + array[index];
-            index = index + 2;
+            sum = sum + array[i];
+            i += +2;
         }
     }
     return sum;
