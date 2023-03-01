@@ -23,7 +23,6 @@ void ShowArray(double[] array) //показ массива
     {
         Console.Write($"{array[index]} ");
     }
-    Console.WriteLine();
 }
 
 double FindMaxMinDiff(double[] array) //нахождение разницы между максимальным и минимальным числом в массиве
