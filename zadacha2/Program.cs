@@ -25,20 +25,16 @@ int SumOddPosition(int[] array) //суммирование элементов, �
 {
     int sum = 0;
     int i = 1;
-    if (array.Length == 1)
     {
-        return array[0];
-    }
-    else
+    while (i < array.Length)
     {
-        while (i < array.Length)
-        {
-            sum = sum + array[i];
-            i += +2;
-        }
+        sum = sum + array[i + 1];
+        i += +2;
     }
     return sum;
+    }
 }
+
 Console.WriteLine("Введите размер массива: "); //введение пользователем размера массива
 int size = Convert.ToInt32(Console.ReadLine());
 if (size <= 1)
